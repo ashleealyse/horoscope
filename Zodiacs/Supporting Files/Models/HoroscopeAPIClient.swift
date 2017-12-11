@@ -11,10 +11,12 @@ import Foundation
 class HoroscopeAPIClient {
     private init() {}
     static let manager = HoroscopeAPIClient()
-    func getHoroscope(from urlString: String, completionHandler: @escaping (Horoscope) -> Void, errorHandler: @escaping (Error) -> Void) {
+    func getHoroscope(from url: String, completionHandler: @escaping (Horoscope) -> Void, errorHandler: @escaping (Error) -> Void) {
         
         
-        guard let url = URL(string: urlString) else {return}
+        guard let url = URL(string: url) else {return}
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
         
         let completion: (Data) -> Void = {(data: Data) in
             do {
@@ -27,8 +29,7 @@ class HoroscopeAPIClient {
             
         }
         
-        NetworkHelper.manager.performDataTask(with: url, completionHandler: completion, errorHandler: errorHandler)
-        
-        
+        NetworkHelper.manager.performDataTask(with: request, completionHandler: completion, errorHandler: errorHandler)
+   
     }
 }

@@ -9,46 +9,170 @@
 import UIKit
 
 class HoroscopeViewController: UIViewController {
-
+    
     //Outlets
+    @IBOutlet weak var signLabel: UILabel!
+    @IBOutlet weak var horoscopeDetailedScroll: UITextView!
+    
+    
     
     //Variables
     
     var horoscope: Horoscope?
+    var defaults = UserDefaults.standard
     var yourHoroscope = ""
+    let nameKey = "nameKey"
+    let birthdayKey = "dateKey"
+    var sign = "aries"
+    var day = "today"
+    var currentDay = ""
+    var currentSign = ""
+  
+    //Buttons
+    
+    @IBAction func yesterdayButton(_ sender: Any) {
+        currentDay = "yesterday"
+        loadHoroscope()
+    }
+    @IBAction func todayButton(_ sender: Any) {
+        currentDay = "today"
+        loadHoroscope()
+    }
+    @IBAction func tomorrowButton(_ sender: Any) {
+        currentDay = "tomorrow"
+        loadHoroscope()
+    }
+    
+    
+    
+    
+    
     
     //View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
+//        if defaults.value(forKey: self.nameKey) == nil || defaults.value(forKey: self.birthdayKey) == nil {
+//            signLabel.text = "Welcome"
+//            horoscopeDetailedScroll.text =
+//            """
+//            Please navigate to the settings page to enter your name and birthdate and see what the stars have in store for you my dear...
+//            """
+//        } else {
+        loadHoroscope()
+//        }
 
     }
+    
+    
+    
+    
+    
+    func generateSign(date: String) {
+        
+
+
+        
+
+        
+    }
+    
+    
+    
+    
+    func loadHoroscope() {
+        
+        sign = "gemini"
+        day = currentDay
+
+        let urlStr = "https://aztro.herokuapp.com/?sign=\(sign)&day=\(day)"
+        
+        let completion: (Horoscope) -> Void = {(onlineHoroscope: Horoscope) in
+            self.horoscope = onlineHoroscope
+            self.setHoroscopeScreen()
+        }
+        
+        
+        HoroscopeAPIClient.manager.getHoroscope(from: urlStr, completionHandler: completion, errorHandler: {print($0)})
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     func setHoroscopeScreen() {
         
+        var date = ""
+        var luckyTime = ""
+        var luckyNumber = "'"
+        var color = ""
+        var mood = ""
+        var compatability = ""
+        var description = ""
+        
+        signLabel.text = "Your Sign Here"
+        
+        if horoscope != nil {
+            date = (horoscope?.current_date)!
+            luckyTime = (horoscope?.lucky_time)!
+            luckyNumber = (horoscope?.lucky_number)!
+            color = (horoscope?.color)!
+            mood = (horoscope?.mood)!
+            compatability = (horoscope?.compatibility)!
+            description = (horoscope?.description)!
+        }
+
+        
         yourHoroscope =
         """
+        Todays Date:
+        \(date)
         
-        Lucky Time: ""
+        Lucky Time:
+        \(luckyTime)
         
-        Compatability: ""
+        Lucky Number:
+        \(luckyNumber)
         
+        Your Color:
+        \(color)
         
+        Mood:
+        \(mood)
         
+        Compatability:
+        \(compatability)
         
+        What's in store for "Sign":
+        \(self.defaults.value(forKey: self.nameKey)!), \(description)
         
-        let mood: String
-        let date_range: String
-        let color: String
-        let description: String
-        let lucky_time: String
-        let compatibility: String
-        let current_date: String
-        let lucky_number: String
-"""
+        """
+        signLabel.text = horoscope?.compatibility
+        horoscopeDetailedScroll.text = yourHoroscope
         
     }
     
+
+    enum Sign {
+        case aries
+        case taurus
+        case gemini
+        case cancer
+        case leo
+        case virgo
+        case libra
+        case scorpio
+        case sagitarius
+        case capricorn
+        case aquarius
+        case pisces
+    }
     
-
-
+    
 }

@@ -42,32 +42,61 @@
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="galaxy-wallpaper-1" translatesAutoresizingMaskIntoConstraints="NO" id="qd9-9G-ykM">
                                 <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TCl-u4-LLr">
-                                <rect key="frame" x="0.0" y="239.5" width="320" height="240.5"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please navigate to the settings page to enter your name and birthdate and see what the stars have in store for you my dear..." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="TCl-u4-LLr">
+                                <rect key="frame" x="0.0" y="240" width="320" height="240"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crN-tD-T6d">
-                                <rect key="frame" x="0.0" y="108" width="320" height="57.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crN-tD-T6d">
+                                <rect key="frame" x="0.0" y="108" width="320" height="58"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjO-8K-sVz">
+                                <rect key="frame" x="0.0" y="182" width="68" height="30"/>
+                                <state key="normal" title="Yesterday"/>
+                                <connections>
+                                    <action selector="yesterdayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r2D-vd-hWH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnR-wh-orQ">
+                                <rect key="frame" x="251" y="182" width="69" height="30"/>
+                                <state key="normal" title="Tomorrow"/>
+                                <connections>
+                                    <action selector="tomorrowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k7H-cj-u7P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIC-tt-aEe">
+                                <rect key="frame" x="123" y="182" width="73" height="30"/>
+                                <state key="normal" title="Today"/>
+                                <connections>
+                                    <action selector="todayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1sD-el-exl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="crN-tD-T6d" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="B4W-d8-gwF"/>
-                            <constraint firstItem="TCl-u4-LLr" firstAttribute="top" secondItem="crN-tD-T6d" secondAttribute="bottom" constant="74" id="FLd-zd-qu3"/>
-                            <constraint firstItem="qd9-9G-ykM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="OXm-Ms-RCn"/>
-                            <constraint firstItem="qd9-9G-ykM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QNl-Bm-cQ0"/>
-                            <constraint firstItem="qd9-9G-ykM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cWk-jg-yyL"/>
-                            <constraint firstItem="crN-tD-T6d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="d3j-TI-VVd"/>
-                            <constraint firstItem="TCl-u4-LLr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hr7-Wl-gbn"/>
-                            <constraint firstItem="TCl-u4-LLr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hwa-mz-mer"/>
-                            <constraint firstItem="qd9-9G-ykM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lqs-mo-0OM"/>
-                            <constraint firstItem="TCl-u4-LLr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nMO-NH-lJ1"/>
-                            <constraint firstItem="crN-tD-T6d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sjI-tU-zYY"/>
+                            <constraint firstItem="VjO-8K-sVz" firstAttribute="top" secondItem="crN-tD-T6d" secondAttribute="bottom" constant="16" id="4xf-qt-hfN"/>
+                            <constraint firstItem="TCl-u4-LLr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5nY-iM-UoB"/>
+                            <constraint firstItem="TCl-u4-LLr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5vo-dV-ucl"/>
+                            <constraint firstItem="TCl-u4-LLr" firstAttribute="top" secondItem="bIC-tt-aEe" secondAttribute="bottom" constant="28" id="Dj5-7M-1mw"/>
+                            <constraint firstItem="crN-tD-T6d" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GVO-c6-nDv"/>
+                            <constraint firstItem="crN-tD-T6d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="He9-Ei-kmx"/>
+                            <constraint firstItem="bIC-tt-aEe" firstAttribute="top" secondItem="crN-tD-T6d" secondAttribute="bottom" constant="16" id="IB3-SR-qGw"/>
+                            <constraint firstItem="dnR-wh-orQ" firstAttribute="leading" secondItem="bIC-tt-aEe" secondAttribute="trailing" constant="55" id="Jwa-ki-YVr"/>
+                            <constraint firstItem="bIC-tt-aEe" firstAttribute="leading" secondItem="VjO-8K-sVz" secondAttribute="trailing" constant="55" id="OuY-m2-yMv"/>
+                            <constraint firstItem="VjO-8K-sVz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sb0-5m-H74"/>
+                            <constraint firstItem="TCl-u4-LLr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yea-9p-wt4"/>
+                            <constraint firstItem="qd9-9G-ykM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dbS-bE-Oxn"/>
+                            <constraint firstItem="crN-tD-T6d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="elb-It-X6s"/>
+                            <constraint firstItem="qd9-9G-ykM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gDX-cc-HQW"/>
+                            <constraint firstItem="TCl-u4-LLr" firstAttribute="top" secondItem="dnR-wh-orQ" secondAttribute="bottom" constant="28" id="ol9-M4-7en"/>
+                            <constraint firstItem="TCl-u4-LLr" firstAttribute="top" secondItem="VjO-8K-sVz" secondAttribute="bottom" constant="28" id="u7w-Sr-8cJ"/>
+                            <constraint firstItem="qd9-9G-ykM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uC2-8v-Tca"/>
+                            <constraint firstItem="TCl-u4-LLr" firstAttribute="top" secondItem="VjO-8K-sVz" secondAttribute="bottom" constant="28" id="ux4-fi-Szu"/>
+                            <constraint firstItem="qd9-9G-ykM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="v7N-3a-tHy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dnR-wh-orQ" secondAttribute="trailing" id="xiK-zX-h4O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -79,10 +108,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="horoscopeDetailedScroll" destination="TCl-u4-LLr" id="FP3-Vo-4BE"/>
+                        <outlet property="signLabel" destination="crN-tD-T6d" id="2UH-VI-Vra"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166.875" y="130"/>
+            <point key="canvasLocation" x="165.59999999999999" y="129.31034482758622"/>
         </scene>
         <!--Settings Table Table View Controller-->
         <scene sceneID="mdL-wO-SE2">
