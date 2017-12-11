@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		93F190FF1FDF19DB004EF8E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F190FE1FDF19DB004EF8E9 /* AppDelegate.swift */; };
-		93F191011FDF19DB004EF8E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F191001FDF19DB004EF8E9 /* ViewController.swift */; };
 		93F191041FDF19DB004EF8E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F191021FDF19DB004EF8E9 /* Main.storyboard */; };
 		93F191061FDF19DB004EF8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93F191051FDF19DB004EF8E9 /* Assets.xcassets */; };
 		93F191091FDF19DB004EF8E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F191071FDF19DB004EF8E9 /* LaunchScreen.storyboard */; };
 		93F191141FDF19DB004EF8E9 /* ZodiacsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F191131FDF19DB004EF8E9 /* ZodiacsTests.swift */; };
 		93F1911F1FDF19DB004EF8E9 /* ZodiacsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F1911E1FDF19DB004EF8E9 /* ZodiacsUITests.swift */; };
+		93F1912E1FDF1C29004EF8E9 /* HoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F1912D1FDF1C29004EF8E9 /* HoroscopeViewController.swift */; };
+		93F191301FDF1C3F004EF8E9 /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F1912F1FDF1C3F004EF8E9 /* Horoscope.swift */; };
+		93F191321FDF1C4E004EF8E9 /* HoroscopeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F191311FDF1C4E004EF8E9 /* HoroscopeAPIClient.swift */; };
+		93F191341FDF1C56004EF8E9 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F191331FDF1C56004EF8E9 /* NetworkHelper.swift */; };
+		93F191361FDF1C5F004EF8E9 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F191351FDF1C5F004EF8E9 /* AppError.swift */; };
+		93F191381FDF23AA004EF8E9 /* SettingsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F191371FDF23AA004EF8E9 /* SettingsTableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,6 @@
 /* Begin PBXFileReference section */
 		93F190FB1FDF19DB004EF8E9 /* Zodiacs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zodiacs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F190FE1FDF19DB004EF8E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93F191001FDF19DB004EF8E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93F191031FDF19DB004EF8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93F191051FDF19DB004EF8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93F191081FDF19DB004EF8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,12 @@
 		93F1911A1FDF19DB004EF8E9 /* ZodiacsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZodiacsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F1911E1FDF19DB004EF8E9 /* ZodiacsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacsUITests.swift; sourceTree = "<group>"; };
 		93F191201FDF19DB004EF8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93F1912D1FDF1C29004EF8E9 /* HoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeViewController.swift; sourceTree = "<group>"; };
+		93F1912F1FDF1C3F004EF8E9 /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
+		93F191311FDF1C4E004EF8E9 /* HoroscopeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAPIClient.swift; sourceTree = "<group>"; };
+		93F191331FDF1C56004EF8E9 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		93F191351FDF1C5F004EF8E9 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		93F191371FDF23AA004EF8E9 /* SettingsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +107,8 @@
 		93F190FD1FDF19DB004EF8E9 /* Zodiacs */ = {
 			isa = PBXGroup;
 			children = (
-				93F190FE1FDF19DB004EF8E9 /* AppDelegate.swift */,
-				93F191001FDF19DB004EF8E9 /* ViewController.swift */,
+				93F1912C1FDF1BF8004EF8E9 /* Supporting Files */,
 				93F191021FDF19DB004EF8E9 /* Main.storyboard */,
-				93F191051FDF19DB004EF8E9 /* Assets.xcassets */,
-				93F191071FDF19DB004EF8E9 /* LaunchScreen.storyboard */,
 				93F1910A1FDF19DB004EF8E9 /* Info.plist */,
 			);
 			path = Zodiacs;
@@ -123,6 +130,38 @@
 				93F191201FDF19DB004EF8E9 /* Info.plist */,
 			);
 			path = ZodiacsUITests;
+			sourceTree = "<group>";
+		};
+		93F1912C1FDF1BF8004EF8E9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93F190FE1FDF19DB004EF8E9 /* AppDelegate.swift */,
+				93F191051FDF19DB004EF8E9 /* Assets.xcassets */,
+				93F191071FDF19DB004EF8E9 /* LaunchScreen.storyboard */,
+				93F1913C1FDF241A004EF8E9 /* View Controllers */,
+				93F1913B1FDF240C004EF8E9 /* Models */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93F1913B1FDF240C004EF8E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				93F1912F1FDF1C3F004EF8E9 /* Horoscope.swift */,
+				93F191311FDF1C4E004EF8E9 /* HoroscopeAPIClient.swift */,
+				93F191331FDF1C56004EF8E9 /* NetworkHelper.swift */,
+				93F191351FDF1C5F004EF8E9 /* AppError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		93F1913C1FDF241A004EF8E9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				93F1912D1FDF1C29004EF8E9 /* HoroscopeViewController.swift */,
+				93F191371FDF23AA004EF8E9 /* SettingsTableTableViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93F191011FDF19DB004EF8E9 /* ViewController.swift in Sources */,
 				93F190FF1FDF19DB004EF8E9 /* AppDelegate.swift in Sources */,
+				93F191381FDF23AA004EF8E9 /* SettingsTableTableViewController.swift in Sources */,
+				93F1912E1FDF1C29004EF8E9 /* HoroscopeViewController.swift in Sources */,
+				93F191361FDF1C5F004EF8E9 /* AppError.swift in Sources */,
+				93F191341FDF1C56004EF8E9 /* NetworkHelper.swift in Sources */,
+				93F191321FDF1C4E004EF8E9 /* HoroscopeAPIClient.swift in Sources */,
+				93F191301FDF1C3F004EF8E9 /* Horoscope.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
