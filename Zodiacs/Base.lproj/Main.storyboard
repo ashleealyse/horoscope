@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Didot.ttc">
+            <string>Didot-Bold</string>
+        </array>
         <array key="Zapfino.ttf">
             <string>Zapfino</string>
         </array>
@@ -42,9 +45,9 @@
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="galaxy-wallpaper-1" translatesAutoresizingMaskIntoConstraints="NO" id="qd9-9G-ykM">
                                 <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please navigate to the settings page to enter your name and birthdate and see what the stars have in store for you my dear..." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="TCl-u4-LLr">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Please navigate to the settings page to enter your name and birthdate and see what the stars have in store for you my dear..." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="TCl-u4-LLr">
                                 <rect key="frame" x="0.0" y="240" width="320" height="240"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crN-tD-T6d">
@@ -53,25 +56,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjO-8K-sVz">
-                                <rect key="frame" x="0.0" y="182" width="68" height="30"/>
-                                <state key="normal" title="Yesterday"/>
-                                <connections>
-                                    <action selector="yesterdayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r2D-vd-hWH"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnR-wh-orQ">
-                                <rect key="frame" x="251" y="182" width="69" height="30"/>
-                                <state key="normal" title="Tomorrow"/>
+                                <rect key="frame" x="235" y="182" width="69" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="0.45462328767123289" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Tomorrow">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="tomorrowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k7H-cj-u7P"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIC-tt-aEe">
                                 <rect key="frame" x="123" y="182" width="73" height="30"/>
-                                <state key="normal" title="Today"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="0.45462328767123289" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Today">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="todayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1sD-el-exl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjO-8K-sVz">
+                                <rect key="frame" x="16" y="182" width="68" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="0.45462328767123289" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Yesterday">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="yesterdayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r2D-vd-hWH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -84,9 +96,9 @@
                             <constraint firstItem="crN-tD-T6d" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GVO-c6-nDv"/>
                             <constraint firstItem="crN-tD-T6d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="He9-Ei-kmx"/>
                             <constraint firstItem="bIC-tt-aEe" firstAttribute="top" secondItem="crN-tD-T6d" secondAttribute="bottom" constant="16" id="IB3-SR-qGw"/>
-                            <constraint firstItem="dnR-wh-orQ" firstAttribute="leading" secondItem="bIC-tt-aEe" secondAttribute="trailing" constant="55" id="Jwa-ki-YVr"/>
-                            <constraint firstItem="bIC-tt-aEe" firstAttribute="leading" secondItem="VjO-8K-sVz" secondAttribute="trailing" constant="55" id="OuY-m2-yMv"/>
-                            <constraint firstItem="VjO-8K-sVz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sb0-5m-H74"/>
+                            <constraint firstItem="dnR-wh-orQ" firstAttribute="leading" secondItem="bIC-tt-aEe" secondAttribute="trailing" constant="39" id="Jwa-ki-YVr"/>
+                            <constraint firstItem="bIC-tt-aEe" firstAttribute="leading" secondItem="VjO-8K-sVz" secondAttribute="trailing" constant="39" id="OuY-m2-yMv"/>
+                            <constraint firstItem="VjO-8K-sVz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Sb0-5m-H74"/>
                             <constraint firstItem="TCl-u4-LLr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yea-9p-wt4"/>
                             <constraint firstItem="qd9-9G-ykM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dbS-bE-Oxn"/>
                             <constraint firstItem="crN-tD-T6d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="elb-It-X6s"/>
@@ -96,7 +108,7 @@
                             <constraint firstItem="qd9-9G-ykM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uC2-8v-Tca"/>
                             <constraint firstItem="TCl-u4-LLr" firstAttribute="top" secondItem="VjO-8K-sVz" secondAttribute="bottom" constant="28" id="ux4-fi-Szu"/>
                             <constraint firstItem="qd9-9G-ykM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="v7N-3a-tHy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dnR-wh-orQ" secondAttribute="trailing" id="xiK-zX-h4O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dnR-wh-orQ" secondAttribute="trailing" constant="16" id="xiK-zX-h4O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

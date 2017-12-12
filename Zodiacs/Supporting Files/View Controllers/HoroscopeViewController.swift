@@ -59,8 +59,11 @@ class HoroscopeViewController: UIViewController {
 //            """
 //        loadHoroscope()
 //        } else {
-        loadHoroscope()
+//        if let sign = self.defaults.value(forKey: birthdayKey) as? String {
+//            self.sign = sign
 //        }
+        loadHoroscope()
+       
 
     }
     
@@ -77,11 +80,13 @@ class HoroscopeViewController: UIViewController {
     
     func loadHoroscope() {
         
-       sign = "gemini"
+        sign = "gemini"
+
+
         day = currentDay
 
         let urlStr = "https://aztro.herokuapp.com/?sign=\(sign)&day=\(day)"
-        
+        print(sign)
         let completion: (Horoscope) -> Void = {(onlineHoroscope: Horoscope) in
             self.horoscope = onlineHoroscope
             self.setHoroscopeScreen()
