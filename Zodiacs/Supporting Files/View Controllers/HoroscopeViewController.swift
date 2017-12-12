@@ -23,7 +23,7 @@ class HoroscopeViewController: UIViewController {
     var yourHoroscope = ""
     let nameKey = "nameKey"
     let birthdayKey = "dateKey"
-    var sign = "aries"
+    var sign = ""
     var day = "today"
     var currentDay = ""
     var currentSign = ""
@@ -57,6 +57,7 @@ class HoroscopeViewController: UIViewController {
 //            """
 //            Please navigate to the settings page to enter your name and birthdate and see what the stars have in store for you my dear...
 //            """
+//        loadHoroscope()
 //        } else {
         loadHoroscope()
 //        }
@@ -68,12 +69,7 @@ class HoroscopeViewController: UIViewController {
     
     
     func generateSign(date: String) {
-        
-
-
-        
-
-        
+  
     }
     
     
@@ -81,7 +77,7 @@ class HoroscopeViewController: UIViewController {
     
     func loadHoroscope() {
         
-        sign = "gemini"
+       sign = "gemini"
         day = currentDay
 
         let urlStr = "https://aztro.herokuapp.com/?sign=\(sign)&day=\(day)"
@@ -149,17 +145,17 @@ class HoroscopeViewController: UIViewController {
         Compatability:
         \(compatability)
         
-        What's in store for "Sign":
+        What's in store for \(sign.capitalized):
         \(self.defaults.value(forKey: self.nameKey)!), \(description)
         
         """
-        signLabel.text = horoscope?.compatibility
+        signLabel.text = sign.capitalized
         horoscopeDetailedScroll.text = yourHoroscope
         
     }
     
 
-    enum Sign {
+    enum HoroscopeSign {
         case aries
         case taurus
         case gemini
